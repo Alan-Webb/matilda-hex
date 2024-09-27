@@ -1,10 +1,10 @@
 // Navbar
 .navbar {
-	transition: all 0.5s ease-in-out;
+	transition: scroll 0.5s ease-in-out;
 }
 
 .navbar-sticky {
-	opacity: 0.8;
+	opacity: 0.7;
 }
 
 .navbar-brand img {
@@ -13,13 +13,22 @@
 
 // Header
 .header {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-		url("") left center no-repeat;
+	background: url("../images/bg-image-1.jpg") left center no-repeat;
 	background-size: cover;
-	height: 600px;
+	height: 60vh;
 }
 
 .vertical-decoration {
 	top: 12%;
 	width: 24px;
+}
+
+@media (max-width: 768px) {
+	.header {
+		background: none;
+		background-color: #000;
+	}
+	.header p {
+		max-width: 250px;
+	}
 }
