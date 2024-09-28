@@ -13,7 +13,7 @@
 .header {
   background: url("../images/bg-image-1.jpg") left center no-repeat;
   background-size: cover;
-  height: 60vh;
+  height: 100vh;
 }
 
 .vertical-decoration {
