@@ -13,7 +13,7 @@
 .header {
   background: url("../images/bg-image-1.jpg") left center no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
 }
 
 @media (max-width: 768px) {
@@ -23,5 +23,11 @@
   }
   .header p {
     max-width: 250px;
+  }
+  .stat {
+    border-right: 0 !important;
+    margin-bottom: 40px;
+    border-bottom: var(--bs-dark) solid 1px;
+    padding-bottom: 20px;
   }
 }
