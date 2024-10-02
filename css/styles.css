@@ -16,6 +16,10 @@
   height: 70vh;
 }
 
+textarea {
+  resize: none;
+}
+
 @media (max-width: 768px) {
   .header {
     background: none;
