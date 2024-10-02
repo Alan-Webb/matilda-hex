@@ -9,6 +9,11 @@ $dark: #222;
 $body-bg: #000;
 $body-color: #fff;
 
+// Shading
+$box-shadow: 0.5rem 1rem $primary;
+$box-shadow-sm: 0 0.25rem 0.5rem $primary;
+$box-shadow-lg: 0 1rem 3rem $primary;
+
 // Spacers
 $spacer: 1rem !default;
 $spacers: (
