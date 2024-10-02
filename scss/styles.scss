@@ -26,10 +26,13 @@ img {
 textarea {
 	resize: none;
 }
+
+// Media Queries
 @media (max-width: 768px) {
 	.header {
 		background: none;
 		background-color: #000;
+		margin-bottom: 4rem;
 	}
 	.header p {
 		max-width: 250px;
@@ -39,5 +42,12 @@ textarea {
 		margin-bottom: 40px;
 		border-bottom: var(--bs-dark) solid 1px;
 		padding-bottom: 20px;
+	}
+}
+
+@media (max-width: 992px) {
+	.stats div {
+		border-left: none;
+		border-right: none;
 	}
 }
