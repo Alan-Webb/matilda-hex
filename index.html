@@ -319,7 +319,7 @@
 			<div class="container mx-auto p-3">
 				<div class="row">
 					<div class="col-lg-6">
-						<div class="text-container text-center my-4">
+						<div class="text-container text-center my-4 px-4">
 							<p class="fs-4 px-4 text-start text-sm-center">
 								Become part of our enchanting community! As a member, you’ll:
 							</p>
@@ -361,7 +361,7 @@
 						<div class="image-container">
 							<img
 								src="./images/membership.jpg"
-								class="img-fluid rounded-4 ms-7"
+								class="img-fluid rounded-4 ms-4"
 								alt="practicing member" />
 						</div>
 					</div>
@@ -589,8 +589,46 @@
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" value="agree" id="flexCheckDefault" required>
 								<label class="form-check-label" for="flexCheckDefault">
-									I Agree to the Terms & Conditions
+									I Agree to the 
+									<a href="termsModal" data-bs-toggle="modal" data-bs-target="#termsModal">
+									Terms & Conditions</a>
 								</label>
+								<!-- Modal -->
+								<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h2 class="modal-title" id="termsModalLabel">Terms & Conditions</h2>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>By checking the box, you agree to be bound by these Terms and Conditions. Please read them carefully.</p>
+											<h3>Services Provided</h3> 
+											<p>Matilda Hex specializes in genuine witchcraft services, which may include but are not limited to spell casting, tarot readings, spiritual guidance, and ritualistic consultations. These services are provided for entertainment purposes only and are not to be used as a substitute for professional legal, medical, or psychological advice.</p>
+											<h3>Results and Expectations</h3>
+											<p>The outcomes of any witchcraft services offered on this Site are not guaranteed. The nature of witchcraft is deeply personal, spiritual, and subjective. Therefore, we cannot promise specific results or timelines. You are responsible for understanding that all services rendered are experimental, metaphysical, and esoteric in nature.</p>
+											<h3>Disclaimer</h3>
+											<p>All content, information, and services provided on or through this Site are for educational and entertainment purposes only. [Website Name] does not warrant the accuracy or completeness of any information provided and will not be liable for any damages or losses arising from your reliance on such information.</p>
+											<h3>No Professional Advice</h3>
+											<p>Any advice or information provided through this Site, whether in person or online, is not intended to replace or substitute professional medical, legal, or psychological advice. You should always seek the help of a qualified professional in these fields if needed.</p>
+											<h3>Payments and Refund Policy</h3>
+											<p>All services must be paid for in advance. Due to the nature of the services provided, no refunds will be issued once a service has been initiated or completed. You agree to this refund policy before making any purchase.</p>
+											<h3>Privacy and Confidentiality</h3>
+											<p>Your privacy is of utmost importance to us. Any information shared with Matilda Hex, including personal details and session content, will remain confidential and will not be disclosed to third parties without your consent, except where required by law.</p>
+											<h3>Intellectual Property</h3>
+											<p>All content on the Site, including but not limited to text, images, graphics, and logos, is the property of Matilda Hex or its licensors and is protected by intellectual property laws. You may not use, reproduce, or distribute any content from the Site without express permission.</p>
+											<h3>Limitation of Liability</h3>
+											<p>To the fullest extent permitted by law, [Website Name] shall not be liable for any direct, indirect, incidental, special, or consequential damages that result from the use of or inability to use the services or content provided on the Site.</p>											
+											<h3>Modifications to Terms</h3>
+											<p>Matilda Hex reserves the right to update or change these Terms and Conditions at any time without prior notice. Any changes will be posted on this page, and it is your responsibility to review these Terms and Conditions periodically for updates.</p>											
+											<p>By using this Site and its services, you agree to these Terms and Conditions in full. Thank you for choosing Matilda Hex for your witchcraft needs. Blessed Be!</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
 							</div>
 							<div class="my-5 d-grid">
 								<button type="submit" class="btn btn-primary text-uppercase">
