@@ -40,3 +40,6 @@ textarea {
     padding-bottom: 20px;
   }
 }
+.card-img-top {
+  height: 250px;
+}

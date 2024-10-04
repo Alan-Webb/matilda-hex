@@ -1,3 +1,4 @@
+// HOME PAGE
 img {
 	max-width: 450px !important;
 }
@@ -43,4 +44,9 @@ textarea {
 		border-bottom: var(--bs-dark) solid 1px;
 		padding-bottom: 20px;
 	}
+}
+
+// SPELLS PAGE
+.card-img-top {
+	height: 250px;
 }
