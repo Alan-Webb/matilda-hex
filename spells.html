@@ -14,6 +14,10 @@
 			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer" />
+			<script src=
+				"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js">
+    	</script>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="./css/bootstrap.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
 		<link rel="icon" href="./images/icons8-pentagram-16.png" />
@@ -24,7 +28,7 @@
 		<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
 			<div class="container">
 				<a class="navbar-brand" href="#">
-				<!-- <img src="./images/matty-hex-logo.png" alt="logo" /> -->
+				<img src="./images/matty-hex-logo.png" alt="logo" />
 				</a>
 				<h2 class="pt-3">Matilda Hex</h2>
 				<button
@@ -91,7 +95,7 @@
 						<div class="card-body bg-secondary rounded-top rounded-4 text-center">
 							<h3 class="card-title text-uppercase p-3">Hex of Unravelling</h3>
 							<p class="card-text fs-5 p-2 ">Feeling tied down or burdened by the trials and tribulations of 21st century life? This hex will dissolve unwanted ties and release you from such burden. With a sprinkle of herbal blend and a personal intention, this spell helps untangle emotional knots, providing clarity and freedom.</p>
-							<a href="#" class="btn btn-primary text-uppercase my-4">Details</a>
+							<button type="button" class="btn btn-primary text-uppercase my-4" data-bs-toggle="modal" data-bs-target="#hexModal1">Details</button>
 						</div>
 					</div>
 					<!-- Card 2 -->
@@ -145,29 +149,39 @@
 			</div>
 		</section>
 		<!-- Hex Modals -->
-		<!-- Hex of Unravelling -->
-			**Feeling tied down or burdened by the trials of 21st-century life? Break free with the *Hex of Unraveling*, a spell crafted to dissolve unwanted bonds and release you from emotional and energetic constraints.**
-
-			This powerful hex is designed for those seeking to shed lingering attachments, whether they be to people, situations, or inner turmoil that no longer serves your highest good. If you’ve been feeling weighed down by expectations, guilt, or obligations, the *Hex of Unraveling* will untangle the invisible threads that hold you back.
-
-			**How It Works**:  
-			With a carefully selected blend of sacred herbs and a unique casting ritual, this hex works to sever ties that obstruct your path. Each spell is personalized with your specific intention, making it as unique as the circumstances you wish to overcome. The herbs and energy channeled during the spellcasting work in harmony to loosen knots of fear, anxiety, and negativity, opening the way for new possibilities and clearer insight.
-
-			**When to Use It**:  
-			- Feeling overwhelmed or burdened by emotional baggage.  
-			- Recovering from a breakup, ending a toxic relationship, or removing lingering energetic connections.  
-			- Releasing past traumas or repetitive thought patterns.  
-			- Preparing for a new chapter in life, free from the constraints of the past.
-
-			**What to Expect**:  
-			The *Hex of Unraveling* initiates a cleansing process, which can manifest in various ways, such as a sense of lightness, emotional clarity, or a newfound sense of freedom. While each experience is unique, the ultimate goal is the same: to release what no longer serves you and create space for healing and growth.
-
-			**Ritual Includes**:  
-			- A custom herbal blend designed to dissolve unwanted ties and cleanse your aura.  
-			- Guided instructions for setting your personal intention, ensuring your energy aligns with the spell’s purpose.  
-			- An optional candle ritual to amplify the hex’s effects and solidify the release process.
-
-			Embrace a lighter, unburdened version of yourself. Order the *Hex of Unraveling* today and let go of what’s been holding you back, making way for the liberation and clarity you deserve.
+		<!-- Hex Modal 1 -->
+		<div id="hexModal1" class="modal fade">
+			<div class="modal-dialog modal-lg mt-7">
+				<div class="modal-content bg-secondary p-5">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h3>Hex of Unravelling</h3>
+							<p>
+								This powerful hex is designed for those seeking to shed lingering attachments, whether they be to people, situations, or inner turmoil that no longer serves your highest good. If you’ve been feeling weighed down by expectations, guilt, or obligations, the Hex of unravelling will untangle the invisible threads that hold you back.
+							</p>
+							<h3>How It Works</h3>
+							<p>
+								With a carefully selected blend of sacred herbs and a unique casting ritual, this hex works to sever ties that obstruct your path. Each spell is personalized with your specific intention, making it as unique as the circumstances you wish to overcome. The herbs and energy channeled during the spellcasting work in harmony to loosen knots of fear, anxiety, and negativity, opening the way for new possibilities and clearer insight.
+							</p>
+							<h3>When to Use It</h3>
+							<p>
+								- Feeling overwhelmed or burdened by emotional baggage.  
+								- Recovering from a breakup, ending a toxic relationship, or removing lingering energetic connections.  
+								- Releasing past traumas or repetitive thought patterns.  
+								- Preparing for a new chapter in life, free from the constraints of the past.
+							</p>
+							<h3>What to Expect</h3>
+							<p>
+								The *Hex of Unraveling* initiates a cleansing process, which can manifest in various ways, such as a sense of lightness, emotional clarity, or a newfound sense of freedom. While each experience is unique, the ultimate goal is the same: to release what no longer serves you and create space for healing and growth.
+							</p>
+							<button class="btn btn-light" data-bs-dismiss="modal">
+								Close
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- Cloak of Invisibilty -->
 			**Need a moment to escape the spotlight? Step into the shadows and find your own peace with the *Cloak of Invisibility*—a powerful spell crafted to temporarily shield you from prying eyes and unwanted attention.**
 
