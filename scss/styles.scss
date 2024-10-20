@@ -3,6 +3,10 @@ img {
 	max-width: 450px !important;
 }
 
+body {
+	overflow-x: hidden !important;
+}
+
 // Navbar
 .navbar {
 	transition: scroll 0.5s ease-in-out;
