@@ -8,7 +8,7 @@
 		"sass:watch": "sass --no-source-map --watch scss:css"
 	},
 	"author": "Alan Webb",
-	"license": "AWDev",
+	"license": "ISC",
 	"private": true,
 	"devDependencies": {
 		"bootstrap": "^5.3.3",
