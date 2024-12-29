@@ -553,8 +553,11 @@
 							<h2 class="mb-4">For quotes, enquiries, or anything else you would like to discuss, we'd love to hear from you. Blessed be!</h2>
 						</div>
 						<!-- Form -->
-						<form name="contact">
+						<form name="contact"
+									action="https://formspree.io/f/mqaabrlr" method="POST"
+									>
 							<div class="mb-5">
+								<label for="name"></label>
 								<input
 									type="text"
 									class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
@@ -563,6 +566,7 @@
 									required />
 							</div>
 							<div class="mb-5">
+								<label for="email"></label>
 								<input
 									type="email"
 									class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
@@ -571,6 +575,7 @@
 									required />
 							</div>
 							<div class="mb-5">
+								<label for="message"></label>
 								<textarea
 									class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
 									name="message"
@@ -622,7 +627,7 @@
 							</div>
 							</div>
 							<div class="my-5 d-grid">
-								<button type="submit" class="btn btn-primary fs-3 text-uppercase">
+								<button type="submit" value="submit" class="btn btn-primary fs-3 text-uppercase">
 									Submit
 								</button>
 							</div>
