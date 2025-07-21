@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Balthazar&display=swap");
+@import "tailwindcss";
+
+:root {
+	font-family: "Balthazar", sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
