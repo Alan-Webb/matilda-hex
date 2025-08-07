@@ -1,4 +1,8 @@
 const Hero = () => {
-	return <div>Hero</div>;
+	return (
+		<section className="h-[60vh]">
+			<div></div>
+		</section>
+	);
 };
 export default Hero;
