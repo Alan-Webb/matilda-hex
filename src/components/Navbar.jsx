@@ -29,10 +29,10 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="flex items-center justify-between px-12 py-4 border-b">
+		<nav className="flex items-center justify-around px-12 py-4 border-b">
 			{/* Logo */}
 			<div>
-				<a href="#" className="flex">
+				<a href="#" className="hidden lg:flex">
 					<img
 						src={Logo}
 						alt="Matilda Hex Logo"
@@ -42,16 +42,16 @@ const Navbar = () => {
 				</a>
 			</div>
 			{/* Desktop Menu */}
-			<div className="mx-auto hidden max-w-2xl items-center justify-center rounded-lg border border-stone-50/30 bg-black/20 py-3 backdrop-blur-lg lg:flex">
-				<div className="flex items-center justify-between gap-6">
+			<div className="hidden py-3 backdrop-blur-lg lg:flex">
+				<div className="flex items-center">
 					<div>
-						<ul className="flex items-center gap-4">
+						<ul className="flex gap-x-8">
 							{LINKS.map((item, index) => (
 								<li key={index}>
 									<a
 										href={item.href}
 										onClick={(e) => handleLinkClick(e, item.href)}
-										className="text-sm hover:text-pink-400">
+										className="text-xl hover:text-red-700">
 										{item.label}
 									</a>
 								</li>
@@ -60,9 +60,9 @@ const Navbar = () => {
 					</div>
 				</div>
 				{/* Nav Actions */}
-				<div className="flex items-center gap-x-5">
+				<div className="hidden lg:flex items-center gap-x-5">
 					{/* Search Bar */}
-					<div className="bg-white rounded-full py-1 px-3 ps-4 m-2 text-black text-[1.4rem]">
+					<div className="bg-white rounded-full py-1 px-3 ps-4 ms-48 text-black text-[1.4rem]">
 						<input
 							type="text"
 							name="search"
@@ -75,13 +75,13 @@ const Navbar = () => {
 						</button>
 					</div>
 					{/* Icons */}
-					<button className="relative text-[2rem] text-red-700 cursor-pointer ">
+					<button className="relative text-[2rem] text-red-700 hover:text-red-500 cursor-pointer ">
 						<GoHeartFill />
 						<span className="flex justify-center items-center absolute top-5 right-4 bg-red-700 text-white text-[0.875rem] w-5 h-5 rounded-full border border-slate-500">
 							1
 						</span>
 					</button>
-					<button className="relative text-[2rem] text-red-700 cursor-pointer">
+					<button className="relative text-[2rem] text-red-700 hover:text-red-500 cursor-pointer">
 						<RiShoppingBag4Line />
 						<span className="flex justify-center items-center absolute top-5 right-4 bg-red-700 text-white text-[0.875rem] w-5 h-5 rounded-full border border-slate-500">
 							3
