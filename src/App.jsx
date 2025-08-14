@@ -1,11 +1,9 @@
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 const App = () => {
 	return (
 		<main className="text-white bg-black antialiased">
-			<Navbar />
-			<Hero />
+			<Home />
 		</main>
 	);
 };
