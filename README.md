@@ -1,6 +1,6 @@
 # Matilda-hex
 
-Website for wiccan services
+eCommerce website for wiccan services
 
 ## Built with
 

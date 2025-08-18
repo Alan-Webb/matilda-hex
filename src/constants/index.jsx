@@ -1,5 +1,6 @@
 export const LINKS = [
+	{href: "#home", label: "Home"},
 	{href: "#spells", label: "Spells"},
-	{href: "#courses", label: "Courses"},
-	{href: "#membership", label: "Membership"},
+	{href: "#testimonials", label: "Testimonials"},
+	{href: "#contact", label: "Contact"},
 ];
