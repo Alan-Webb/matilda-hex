@@ -16,32 +16,35 @@ const Header = () => {
 	const [token, settoken] = useState(``);
 
 	return (
-		<header className="bg-black text-white">
-			<div>
+		<header className="w-full z-50 bg-black text-white">
+			<div className="flex justify-between py-3">
 				{/* Logo left side */}
-				<Link to={"/"}>
+				<Link to={"/"} className="flex flex-1">
 					<div className="text-3xl p-4">
 						Matilda Hex
 						<img
 							src={Logo}
 							alt="Matilda Hex Logo"
-							className="inline-block h-8 ms-4"
+							className="inline-block h-8 ms-3 mb-1"
 						/>
 					</div>
 				</Link>
 				{/* Navbar */}
-				<div>
+				<div className="flex-1 bg-pink-200">
 					<Navbar />
 				</div>
 				{/* Buttons Right Side */}
-				<div>
+				<div className="flex flex-1 items-center justify-end gap-x-4 xs:gap-x-8">
 					{/* Menu Toggle */}
-					<FaBars />
+					<FaBars className="xl:hidden text-xl cursor-pointer" />
 					{/* Search Icons */}
-					<FaSearch />
+					<FaSearch className="text-lg cursor-pointer" />
 					{/* Cart */}
-					<Link to={"/cart"}>
-						<FaShoppingBasket />
+					<Link to={"/cart"} className="flex relative">
+						<FaShoppingBasket className="text-[1.688rem]" />
+						<span className="absolute left-[-0.25rem] top-3.5 flex justify-center items-center  text-[0.75rem] w-5 h-5 font-semibold rounded-full bg-red-800 shadow-inner shadow-pink-100">
+							0
+						</span>
 					</Link>
 					{/* User Profile */}
 					<div>
