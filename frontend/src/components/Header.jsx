@@ -41,8 +41,8 @@ const Header = () => {
 					<FaSearch className="text-lg cursor-pointer" />
 					{/* Cart */}
 					<Link to={"/cart"} className="flex relative">
-						<FaShoppingBasket className="text-[1.688rem]" />
-						<span className="absolute left-[-0.25rem] top-3.5 flex justify-center items-center  text-[0.75rem] w-5 h-5 font-semibold rounded-full bg-red-800 shadow-md shadow-gray-400">
+						<FaShoppingBasket className="text-[2rem]" />
+						<span className="absolute top-3.5 left-[-0.5rem] flex justify-center items-center  text-[0.75rem] w-5 h-5 font-semibold rounded-full bg-red-800 shadow-md shadow-gray-400">
 							0
 						</span>
 					</Link>
@@ -51,12 +51,12 @@ const Header = () => {
 						<div>
 							{token ? (
 								<div>
-									<FaCircleUser className="text-[1.8rem]" />
+									<FaCircleUser className="text-[1.8rem] cursor-pointer" />
 								</div>
 							) : (
 								<button className="flex items-center  gap-x-2 border border-gray-400 rounded-3xl bg-red-800 shadow-md shadow-gray-400 py-2 px-6 me-6 text-[1.4rem] cursor-pointer">
 									Login
-									<RiUserLine />
+									<RiUserLine className="text-xl" />
 								</button>
 							)}
 						</div>
