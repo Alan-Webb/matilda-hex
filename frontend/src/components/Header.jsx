@@ -16,7 +16,7 @@ const Header = () => {
 	const [token, settoken] = useState(``);
 
 	return (
-		<header className="w-full z-50 bg-black text-white">
+		<header className="w-full z-50 bg-black text-white border-b border-white">
 			<div className="flex justify-between py-3">
 				{/* Logo left side */}
 				<Link to={"/"} className="flex flex-1">
@@ -30,7 +30,7 @@ const Header = () => {
 					</div>
 				</Link>
 				{/* Navbar */}
-				<div className="flex-1 bg-pink-200">
+				<div className="flex-1">
 					<Navbar />
 				</div>
 				{/* Buttons Right Side */}
@@ -47,7 +47,7 @@ const Header = () => {
 						</span>
 					</Link>
 					{/* User Profile */}
-					<div className="group relative">
+					<div className="relative">
 						<div>
 							{token ? (
 								<div>
