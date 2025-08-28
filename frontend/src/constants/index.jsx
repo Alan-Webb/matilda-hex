@@ -1,6 +1,6 @@
 export const LINKS = [
-	{href: "#home", label: "Home"},
-	{href: "#spells", label: "Spells"},
-	{href: "#testimonials", label: "Testimonials"},
-	{href: "#contact", label: "Contact"},
+	{id: "1", path: "/", title: "Home"},
+	{id: "2", path: "#spells", title: "Spells"},
+	{id: "3", path: "#testimonials", title: "Testimonials"},
+	{id: "4", path: "/mailto:matildahex@gmail.com", title: "Contact"},
 ];

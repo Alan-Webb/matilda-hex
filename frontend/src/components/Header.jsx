@@ -20,7 +20,7 @@ const Header = () => {
 			<div className="flex justify-between py-3">
 				{/* Logo left side */}
 				<Link to={"/"} className="flex flex-1">
-					<div className="text-3xl p-4">
+					<div className="text-3xl p-4 hover:text-red-800">
 						Matilda Hex
 						<img
 							src={Logo}
