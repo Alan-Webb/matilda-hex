@@ -38,11 +38,11 @@ const Header = () => {
 					{/* Menu Toggle */}
 					<FaBars className="xl:hidden text-xl cursor-pointer" />
 					{/* Search Icons */}
-					<FaSearch className="text-lg cursor-pointer" />
+					<FaSearch className="text-lg cursor-pointer hover:text-red-500" />
 					{/* Cart */}
 					<Link to={"/cart"} className="flex relative">
-						<FaShoppingBasket className="text-[2rem]" />
-						<span className="absolute top-3.5 left-[-0.5rem] flex justify-center items-center  text-[0.75rem] w-5 h-5 font-semibold rounded-full bg-red-800 shadow-md shadow-gray-400">
+						<FaShoppingBasket className="text-[2rem] hover:text-red-500" />
+						<span className="absolute top-3.5 left-[-0.5rem] flex justify-center items-center  text-[0.75rem] w-5 h-5 font-semibold rounded-full bg-red-800 shadow-md shadow-gray-400 outline-gray-400">
 							0
 						</span>
 					</Link>

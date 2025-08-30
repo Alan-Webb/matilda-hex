@@ -1,17 +1,11 @@
 import {NavLink} from "react-router-dom";
-import {LINKS} from "../constants";
+import { NAV_LINKS } from "../constants";
 
 const Navbar = () => {
-	const NavLinks = [
-		{path: "/", title: "Home"},
-		{path: "/collection", title: "Collection"},
-		{path: "/testimonials", title: "Testimonials"},
-		{path: "/mailto:matildahex@gmail.com", title: "Contact"},
-	];
-
+	
 	return (
 		<nav className="flex gap-x-6 mt-6 text-2xl">
-			{NavLinks.map((link) => (
+			{NAV_LINKS.map((link) => (
 				<NavLink
 					key={link.title}
 					className="list-none hover:text-red-500"
