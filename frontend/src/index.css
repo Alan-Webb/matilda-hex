@@ -3,7 +3,7 @@
 
 :root {
 	font-family: "Balthazar", sans-serif;
-
+	font-optical-sizing: auto;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;

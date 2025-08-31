@@ -1,21 +1,16 @@
-import {Route, Routes} from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import Spells from "./pages/Spells";
-import Product from "./pages/Product";
-import Testimonials from "./pages/Testimonials";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import UserLayout from "./components/Layout/UserLayout";
 
 const App = () => {
 	return (
-		<main>
-			<Header />
+		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/spells" element={<Spells />} />
-				<Route path="/productId" element={<Product />} />
-				<Route path="/testimonials" element={<Testimonials />} />
+				<Route path="/" element={<UserLayout />}>
+					{/* User Layout */}
+				</Route>
+				<Route>{/* Admin Layout */}</Route>
 			</Routes>
-		</main>
+		</BrowserRouter>
 	);
 };
 export default App;
