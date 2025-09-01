@@ -2,12 +2,11 @@ import TopBar from "../Layout/TopBar";
 
 const Header = () => {
 	return (
-		<div>
-			{/* TopBar */}
+		<header>
 			<TopBar />
 			{/* Navbar */}
 			{/* Cart Drawer */}
-		</div>
+		</header>
 	);
 };
 export default Header;
