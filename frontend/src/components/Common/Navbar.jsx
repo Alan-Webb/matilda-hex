@@ -2,11 +2,12 @@ import {Link} from "react-router-dom";
 import Logo from "/src/assets/matty-hex-logo.webp";
 import {HiOutlineUser} from "react-icons/hi";
 import {FaBagShopping, FaBars} from "react-icons/fa6";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
 	return (
 		<>
-			<nav className="container mx-auto flex items-center justify-between py-4 px-6 bg-black border-b border-white text-white">
+			<nav className="w-full fixed mx-auto flex items-center justify-between py-4 px-6 bg-black border-b border-white text-white">
 				{/* Left Side Logo */}
 				<div>
 					<Link to="/">
@@ -55,6 +56,7 @@ const Navbar = () => {
 						</span>
 					</button>
 					{/* Search */}
+					<SearchBar />
 					{/* Mobile Navigation */}
 					<button className="md:hidden cursor-pointer">
 						<FaBars className="h-6 w-6" />
