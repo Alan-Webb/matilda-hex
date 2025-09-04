@@ -10,6 +10,12 @@ const SearchBar = () => {
 		setIsOpen(!isOpen);
 	};
 
+	const handleSearch = (e) => {
+		e.preventDefault();
+		console.log("Search Term:", searchTerm);
+		setIsOpen(false);
+	};
+
 	return (
 		<div
 			className={`flex items-center justify-center w-full transition-all duration-700 ${
@@ -18,14 +24,16 @@ const SearchBar = () => {
 					: "w-auto"
 			}`}>
 			{isOpen ? (
-				<form className="relative flex items-center justify-center w-full">
+				<form
+					onSubmit={handleSearch}
+					className="relative flex items-center justify-center w-full">
 					<div className="relative w-1/2">
 						<input
 							type="text"
 							name="search-products"
 							placeholder="Search"
 							value={searchTerm}
-							onChange={(e) => searchTerm(e.target.value)}
+							onChange={(e) => setSearchTerm(e.target.value)}
 							className="rounded-xl bg-gray-100 text-black text-lg px-4 py-2 pl-2 pr-12 focus:outline-none w-full"
 						/>
 						{/* Search Icon */}

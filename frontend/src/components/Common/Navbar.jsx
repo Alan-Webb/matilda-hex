@@ -56,7 +56,10 @@ const Navbar = () => {
 						</span>
 					</button>
 					{/* Search */}
-					<SearchBar />
+					<div className="overflow-hidden">
+						<SearchBar />
+					</div>
+
 					{/* Mobile Navigation */}
 					<button className="md:hidden cursor-pointer">
 						<FaBars className="h-6 w-6" />
