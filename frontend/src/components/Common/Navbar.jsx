@@ -1,10 +1,18 @@
 import {Link} from "react-router-dom";
+import {useState} from "react";
 import Logo from "/src/assets/matty-hex-logo.webp";
 import {HiOutlineUser} from "react-icons/hi";
 import {FaBagShopping, FaBars} from "react-icons/fa6";
 import SearchBar from "./SearchBar";
+import CartDrawer from "../Layout/CartDrawer";
 
 const Navbar = () => {
+	const [drawerOpen, setDrawerOpen] = useState(true);
+
+	const toggleCartDrawer = () => {
+		setDrawerOpen(!drawerOpen);
+	};
+
 	return (
 		<>
 			<nav className="w-full fixed mx-auto flex items-center justify-between py-4 px-6 bg-black border-b border-white text-white">
@@ -49,7 +57,9 @@ const Navbar = () => {
 					<Link to="/profile">
 						<HiOutlineUser className="h-6 w-6 hover:text-red-500" />
 					</Link>
-					<button className="relative">
+					<button
+						onClick={toggleCartDrawer}
+						className="relative cursor-pointer">
 						<FaBagShopping className="relative h-6 w-6 hover:text-red-500" />
 						<span className="absolute top-3.5 right-3 bg-red-700 text-sm rounded-full px-2 py-0.2">
 							6
@@ -66,6 +76,7 @@ const Navbar = () => {
 					</button>
 				</div>
 			</nav>
+			<CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
 		</>
 	);
 };

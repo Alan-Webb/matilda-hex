@@ -44,7 +44,10 @@ const SearchBar = () => {
 						</button>
 					</div>
 					{/* Close Button */}
-					<button type="button" className="absolute right-4 cursor-pointer ">
+					<button
+						onClick={handleSearchToggle}
+						type="button"
+						className="absolute right-4 cursor-pointer ">
 						<IoIosClose className="h-10 w-10 text-white hover:text-red-500" />
 					</button>
 				</form>
