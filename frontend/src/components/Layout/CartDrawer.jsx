@@ -4,7 +4,7 @@ import CartContents from "../Cart/CartContents";
 const CartDrawer = ({drawerOpen, toggleCartDrawer}) => {
 	return (
 		<div
-			className={`fixed top-0 right-0 w-3/4 sm:w-1/2 md:w-1/4 h-full bg-black shadow-lg shadow-gray-600 text-white transform transition-transform duration-300 flex flex-col z-50 ${
+			className={`fixed top-0 right-0 w-3/4 sm:w-2/3 md:w-1/2 h-full bg-black shadow-lg shadow-gray-600 text-white transform transition-transform duration-300 flex flex-col z-50 ${
 				drawerOpen ? "translate-x-0" : "translate-x-full"
 			}`}>
 			{/* Close Button */}
@@ -15,15 +15,15 @@ const CartDrawer = ({drawerOpen, toggleCartDrawer}) => {
 			</div>
 			{/* Cart Content with Scrollable Area */}
 			<div className="flex-grow p-4 overflow-y-auto">
-				<h2 className="text-xl font-semiboldmb-4">Your Cart</h2>
+				<h2 className="text-3xl text-center font-semibold mb-4">Your Cart</h2>
 				<CartContents />
 			</div>
 			{/* Checkout Button */}
-			<div className="p-4 sticky bottom-0">
-				<button className="w-full bg-red-800 py-3 rounded-lg text-2xl uppercase font-semibold hover:bg-red-700 transition duration-500 cursor-pointer">
+			<div className="flex flex-col items-center p-4 sticky bottom-0">
+				<button className="w-1/2 bg-red-800 py-3 mb-4 rounded-lg text-2xl uppercase font-semibold hover:bg-red-700 transition duration-500 cursor-pointer">
 					Checkout
 				</button>
-				<p className="text-sm tracking-tighter mt-2 text-center">
+				<p className="text-sm tracking-tighter mt-2 text-center uppercase">
 					Shipping, taxes and discount codes calculated at checkout
 				</p>
 			</div>
