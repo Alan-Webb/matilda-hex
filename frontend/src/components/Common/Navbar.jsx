@@ -25,12 +25,12 @@ const Navbar = () => {
 				{/* Left Side Logo */}
 				<div>
 					<Link to="/">
-						<div className="text-2xl font-medium">
+						<div className="text-xl font-medium">
 							Matilda Hex
 							<img
 								src={Logo}
 								alt="Matilda Hex Logo"
-								className="inline-block h-8 w-8 ms-4"
+								className="inline-block h-6 w-6 ms-3"
 							/>
 						</div>
 					</Link>
