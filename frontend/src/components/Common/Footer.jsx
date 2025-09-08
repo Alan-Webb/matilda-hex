@@ -2,12 +2,10 @@ const Footer = () => {
 	return (
 		<footer className="bg-black text-white border-t border-white py-12 mt-12">
 			<div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 lg:px-0">
-				<div className="ps-2">
-					<h3 className="text-lg mb-4">Newsletter</h3>
-					<p className="text-gray-400 mb-4">
-						Subscribe for new products and online offers.
-					</p>
-					<p>Sign up and get 10% off your first order.</p>
+				<div className="ps-2 text-center text-lg uppercase">
+					<h3 className="mb-4">Newsletter</h3>
+					<p className="mb-4">Subscribe for new products and online offers</p>
+					<p>Sign up and get 10% off your first order</p>
 					{/* Newsletter Form */}
 					<form className="flex">
 						<input
