@@ -1,6 +1,7 @@
 import {FaFacebook} from "react-icons/fa";
 import {IoLogoInstagram} from "react-icons/io";
 import {FaXTwitter} from "react-icons/fa6";
+import {BsFillTelephoneFill} from "react-icons/bs";
 
 const TopBar = () => {
 	return (
@@ -12,7 +13,7 @@ const TopBar = () => {
 						<FaFacebook className="h-6 w-6" />
 					</a>
 					<a href="#" className="hover:text-gray-300">
-						<IoLogoInstagram className="h-6.5 w-6.5" />
+						<IoLogoInstagram className="h-7 w-7" />
 					</a>
 					<a href="#" className="hover:text-gray-300">
 						<FaXTwitter className="h-5.5 w-5.5" />
@@ -23,9 +24,10 @@ const TopBar = () => {
 				<div className="text-lg text-center flex-grow">
 					<span>We Ship Worldwide - Fast and reliable Wiccan Solutions</span>
 				</div>
-				<div className="hidden md:block text-lg">
-					<a href="tel:+4420 7251 4571" className="hover:text-gray-300">
-						TEL: 020 7251 4571
+				<div className="hidden md:flex text-lg">
+					<BsFillTelephoneFill className="mt-1" />
+					<a href="tel:+4420 7251 4571" className="hover:text-gray-300 ms-2">
+						020 7251 4571
 					</a>
 				</div>
 			</div>
