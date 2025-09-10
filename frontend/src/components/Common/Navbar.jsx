@@ -37,7 +37,7 @@ const Navbar = () => {
 				</div>
 
 				{/* Navigation Links */}
-				<div className="hidden md:flex space-x-6 me-16">
+				<div className="hidden md:flex space-x-6 me-8">
 					<Link
 						to="#"
 						className="text-lg font-medium uppercase hover:text-red-500">

@@ -6,7 +6,7 @@ import {BsFillTelephoneFill} from "react-icons/bs";
 
 const Footer = () => {
 	return (
-		<footer className="bg-black text-white border-t border-white py-12 mt-12">
+		<footer className="bg-black text-white border-t border-white py-12">
 			<div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 lg:px-0">
 				<div className="ps-2 text-lg">
 					<h3 className="uppercase mb-4">Newsletter</h3>
