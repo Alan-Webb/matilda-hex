@@ -21,7 +21,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className="w-full fixed mx-auto flex items-center justify-between py-4 px-6 bg-black border-b border-white text-white">
+			<nav className="w-full fixed mx-auto flex items-center justify-between py-4 px-6 bg-black border-b border-white text-white z-10">
 				{/* Left Side Logo */}
 				<div>
 					<Link to="/">
@@ -91,7 +91,7 @@ const Navbar = () => {
 
 			{/* Mobile Navigation */}
 			<div
-				className={`fixed  flex flex-col top-0 left-0 w-full sm:w-2/3 bg-black shadow-lg shadow-gray-600 text-white transform transition-transform duration-300z-50 ${
+				className={`fixed  flex flex-col top-0 left-0 w-full sm:w-2/3 bg-black shadow-lg shadow-gray-600 text-white transform transition-transform duration-300 z-50 ${
 					navOpen ? "translate-x-0" : "-translate-x-full"
 				}`}>
 				<div className="flex justify-end p-4">

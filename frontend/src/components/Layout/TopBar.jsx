@@ -5,7 +5,7 @@ import {BsFillTelephoneFill} from "react-icons/bs";
 
 const TopBar = () => {
 	return (
-		<div className="bg-red-600 text-white">
+		<div className="bg-red-800 text-white">
 			<div className="container mx-auto flex justify-between items-center py-3">
 				{/* Social Media Links */}
 				<div className="hidden md:flex md:ms-2 items-center space-x-4">
