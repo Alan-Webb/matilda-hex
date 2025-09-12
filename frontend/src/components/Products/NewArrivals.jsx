@@ -7,8 +7,8 @@ const NewArrivals = () => {
 	const [isDragging, setIsDragging] = useState(false);
 	const [startX, setStartX] = useState(0);
 	const [scrollLeft, setScrollLeft] = useState(false);
-	const [canScrollLeft, setCanScrollLeft] = useState(false);
 	const [canScrollRight, setCanScrollRight] = useState(true);
+	const [canScrollLeft, setCanScrollLeft] = useState(true);
 
 	const newArrivals = [
 		{
@@ -94,9 +94,18 @@ const NewArrivals = () => {
 		},
 	];
 
+	useEffect(() => {
+		const container = scrollRef.current;
+
+		if (container) {
+			container.addEventListener("scroll", updateScrollButtons);
+			updateScrollButtons();
+		}
+	});
+
 	const scroll = (direction) => {
 		const scrollAmount = direction === "left" ? -300 : 300;
-		scrollRef.current.scrollBy({left: scrollAmount, behaviour: "smooth"});
+		scrollRef.current.scrollBy({left: scrollAmount, behavior: "smooth"});
 	};
 
 	// Update Scroll Buttons
@@ -112,21 +121,12 @@ const NewArrivals = () => {
 			setCanScrollRight(rightScrollable);
 		}
 
-		console.log({
-			scrollLeft: container.scrollLeft,
-			clientWidth: container.clientWidth,
-			containerScrollWidth: container.containerScrollWidth,
-		});
+		// console.log({
+		// 	scrollLeft: container.scrollLeft,
+		// 	clientWidth: container.clientWidth,
+		// 	containerScrollWidth: container.containerScrollWidth,
+		// });
 	};
-
-	useEffect(() => {
-		const container = scrollRef.current;
-
-		if (container) {
-			container.addEventListener("scroll", updateScrollButtons);
-			updateScrollButtons();
-		}
-	});
 
 	return (
 		<section className="bg-black text-white">
@@ -141,7 +141,7 @@ const NewArrivals = () => {
 				<div className="absolute right-0 bottom[-16rem] flex space-x-2">
 					<button
 						onClick={() => scroll("left")}
-						disabled={canScrollLeft}
+						disabled={!canScrollLeft}
 						className={`p-2 rounded-full  cursor-pointer ${
 							canScrollLeft
 								? "bg-white text-black"
@@ -166,7 +166,8 @@ const NewArrivals = () => {
 						<img
 							// src={product.image[0]?.url}
 							src={product.image.url}
-							alt={product.image[0]?.altText || product.name}
+							// alt={product.image[0]?.altText || product.name}
+							alt={product.image.altText || product.name}
 							className="w-full h-[31.25rem] object-cover rounded-lg"
 						/>
 						<div className="absolute bottom-0 left-0 right-0 bg-opacity-50 backdrop-blur-md p-4 rounded-b-lg">
