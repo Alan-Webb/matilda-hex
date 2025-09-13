@@ -33,18 +33,18 @@ const NewArrivals = () => {
 
 	return (
 		<section className="bg-black text-white">
-			<div className="mx-auto text-center pb-10 relative">
-				<h2 className="text-3xl font-bold mb-4">Explore New Arrivals</h2>
+			<div className="mx-auto text-center p-8">
+				<h2 className="text-3xl font-bold mb-4">Latest Courses</h2>
 				<p className="text-lg mb-8">
-					Discover our latest Wicca courses and spell casting kits to enhance
-					your life.
+					Discover our latest Wiccan education courses to enhance your spell
+					casting abilities.
 				</p>
 			</div>
 			<div className="container mx-auto flex space-x-6 pb-8">
 				{newArrivals.map((product) => (
 					<div
 						key={product._id}
-						className="min-w-[100%] sm:min-w-[50%] lg:min-w-[30%] relative">
+						className="min-w-[100%] sm:min-w-[48%] lg:min-w-[30%] relative">
 						<img
 							// src={product.image[0]?.url}
 							src={product.image.url}
@@ -54,7 +54,9 @@ const NewArrivals = () => {
 						/>
 						<div className="absolute bottom-0 left-0 right-0 bg-opacity-50 backdrop-blur-md p-4 rounded-b-lg">
 							<Link to={`/product/${product._id}`} className="block">
-								<h4 className="font-medium text-xl">{product.name}</h4>
+								<h4 className="font-medium text-xl hover:text-black">
+									{product.name}
+								</h4>
 								<p className="mt-1 text-lg">€{product.price}</p>
 							</Link>
 						</div>
