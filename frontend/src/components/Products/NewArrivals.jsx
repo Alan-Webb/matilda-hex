@@ -32,7 +32,7 @@ const NewArrivals = () => {
 	];
 
 	return (
-		<section className="bg-black text-white">
+		<section className="bg-red-800 text-white py-12">
 			<div className="mx-auto text-center p-8">
 				<h2 className="text-3xl font-bold mb-4">Latest Courses</h2>
 				<p className="text-lg mb-8">
@@ -50,7 +50,7 @@ const NewArrivals = () => {
 							src={product.image.url}
 							// alt={product.image[0]?.altText || product.name}
 							alt={product.image.altText || product.name}
-							className="w-full h-[31.25rem] object-cover rounded-lg"
+							className="w-full h-[31.25rem] object-cover rounded-lg shadow-2xl shadow-black"
 						/>
 						<div className="absolute bottom-0 left-0 right-0 bg-opacity-50 backdrop-blur-md p-4 rounded-b-lg">
 							<Link to={`/product/${product._id}`} className="block">

@@ -13,7 +13,7 @@ const CollectionSection = () => {
 						alt="spells"
 						className="w-full h-[43.75rem] object-cover"
 					/>
-					<div className="absolute bottom-8 left-8 bg-red-800 rounded-xl shadow-black bg-origin-padding-90 p-4">
+					<div className="absolute bottom-8 left-8 bg-red-800 rounded-xl shadow-black shadow-lg bg-origin-padding-90 p-4 border border-black ">
 						<h2 className="text-2xl font-bold mb-3">Spells & Incantations</h2>
 						<Link
 							to="/collections/all?collection=Spells"
@@ -30,7 +30,7 @@ const CollectionSection = () => {
 						alt="courses"
 						className="w-full h-[43.75rem] object-cover"
 					/>
-					<div className="absolute bottom-8 left-8 bg-red-800 rounded-xl shadow-black bg-origin-padding-90 p-4">
+					<div className="absolute bottom-8 left-8 bg-red-800 rounded-xl shadow-black shadow-lg bg-origin-padding-90 p-4 border border-black ">
 						<h2 className="text-2xl font-bold mb-3">Witchcraft Courses</h2>
 						<Link
 							to="/collections/all?collection=Courses"
