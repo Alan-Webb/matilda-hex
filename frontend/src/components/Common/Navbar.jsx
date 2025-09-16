@@ -21,7 +21,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className="w-full fixed mx-auto flex items-center justify-between py-4 px-6 bg-black border-b border-white text-white z-10">
+			<nav className="w-full fixed mx-auto flex items-center justify-between py-4 px-6 bg-black border-b border-t border-stone-400 text-white z-10">
 				{/* Left Side Logo */}
 				<div>
 					<Link to="/">

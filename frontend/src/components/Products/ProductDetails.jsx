@@ -1,3 +1,5 @@
+import {useEffect, useState} from "react";
+
 const selectedProduct = {
 	name: "Cloak of Invisibility Spell Kit",
 	price: 60,
@@ -12,16 +14,26 @@ const selectedProduct = {
 			altText: "Cloak of Invisibility",
 		},
 		{
-			url: "../../src/assets/cloak-of-invisibility.webp",
+			url: "../../src/assets/cloak-of-invisibility-2.webp",
 			altText: "Cloak of Invisibility",
 		},
 	],
 };
 
 const ProductDetails = () => {
+	const [mainImage, setMainImage] = useState("");
+	const [quantity, setQuantity] = useState(1);
+	const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
+	useEffect(() => {
+		if (selectedProduct?.images?.length > 0) {
+			setMainImage(selectedProduct.images[0].url);
+		}
+	}, [selectedProduct]);
+
 	return (
 		<div className="bg-black text-white p-6">
-			<div className="bg-red-800 max-w-6xl mx-auto p-8 rounded-lg">
+			<div className="bg-stone-600 max-w-6xl mx-auto p-8 rounded-lg">
 				<div className="flex flex-col md:flex-row">
 					{/* Left Thumbnails */}
 					<div className="hidden md:flex flex-col space-y-4 mr-6">
@@ -30,7 +42,10 @@ const ProductDetails = () => {
 								key={index}
 								src={image.url}
 								alt={image.altText || `Thumbnail ${index}`}
-								className="w-60 h-auto object-cover rounded-lg cursor-pointer border border-black shadow-lg shadow-black"
+								className={`w-60 h-auto object-cover rounded-lg cursor-pointer border ${
+									mainImage === image.url ? " border-black" : "border-slate-400"
+								}`}
+								onClick={() => setMainImage(image.url)}
 							/>
 						))}
 					</div>
@@ -38,7 +53,7 @@ const ProductDetails = () => {
 					<div>
 						<div className="flex flex-2 mb-4">
 							<img
-								src={selectedProduct.images[0]?.url}
+								src={mainImage}
 								alt="main product"
 								className="w-full mx-auto max-w-6xl object-cover rounded-lg"
 							/>
@@ -51,7 +66,10 @@ const ProductDetails = () => {
 								key={index}
 								src={image.url}
 								alt={image.altText || `Thumbnail ${index}`}
-								className="w-20 h-20 object-cover rounded-lg cursor-pointer border border-black shadow-lg shadow-black"
+								className={`w-60 h-auto object-cover rounded-lg cursor-pointer border ${
+									mainImage === image.url ? " border-black" : "border-slate-400"
+								}`}
+								onClick={() => setMainImage(image.url)}
 							/>
 						))}
 					</div>
