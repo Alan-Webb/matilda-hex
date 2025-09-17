@@ -1,4 +1,6 @@
 import {useEffect, useState} from "react";
+import {toast} from "sonner";
+import ProductGrid from "./ProductGrid";
 
 const selectedProduct = {
 	name: "Cloak of Invisibility Spell Kit",
@@ -14,22 +16,79 @@ const selectedProduct = {
 			altText: "Cloak of Invisibility",
 		},
 		{
-			url: "../../src/assets/cloak-of-invisibility-2.webp",
+			url: "../../src/assets/blessing-spell-kit.webp",
 			altText: "Cloak of Invisibility",
 		},
 	],
 };
 
+const similarProducts = [
+	{
+		_id: 1,
+		name: "Crystal Clear Insight",
+		price: 85,
+		images: [
+			{
+				url: "../../src/assets/crystal-clear-insight.webp",
+				altText: "Crystal Clear Insight",
+			},
+		],
+	},
+	{
+		_id: 2,
+		name: "Eclipse of Joy",
+		price: 85,
+		images: [
+			{
+				url: "../../src/assets/eclipse-of-joy.webp",
+				altText: "Eclipse of Joy",
+			},
+		],
+	},
+	{
+		_id: 3,
+		name: "Scrying Shadows",
+		price: 85,
+		images: [
+			{
+				url: "../../src/assets/scrying-shadows.webp",
+				altText: "Scrying Shadows",
+			},
+		],
+	},
+	{
+		_id: 4,
+		name: "Snare of Despair",
+		price: 85,
+		images: [
+			{
+				url: "../../src/assets/snare-of-despair.webp",
+				altText: "Snare of Despair",
+			},
+		],
+	},
+];
+
 const ProductDetails = () => {
 	const [mainImage, setMainImage] = useState("");
 	const [quantity, setQuantity] = useState(1);
-	const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
 	useEffect(() => {
 		if (selectedProduct?.images?.length > 0) {
 			setMainImage(selectedProduct.images[0].url);
 		}
 	}, [selectedProduct]);
+
+	const handleQuantityChange = (action) => {
+		if (action === "plus") setQuantity((prev) => prev + 1);
+		if (action === "minus" && quantity > 1) setQuantity((prev) => prev - 1);
+	};
+
+	const handleAddToCart = () => {
+		setTimeout(() => {
+			toast.success("Added to cart", {duration: 1000});
+		});
+	};
 
 	return (
 		<div className="bg-black text-white p-6">
@@ -67,7 +126,7 @@ const ProductDetails = () => {
 								src={image.url}
 								alt={image.altText || `Thumbnail ${index}`}
 								className={`w-60 h-auto object-cover rounded-lg cursor-pointer border ${
-									mainImage === image.url ? " border-black" : "border-slate-400"
+									mainImage === image.url ? "border-black" : "border-slate-400"
 								}`}
 								onClick={() => setMainImage(image.url)}
 							/>
@@ -102,20 +161,32 @@ const ProductDetails = () => {
 						<div className="mb-6">
 							<p className="uppercase ms-2 text-xl">Quantity</p>
 							<div className="flex items-center space-x-4 mt-2">
-								<button className="p-3 bg-black rounded-xl text-lg border border-gray-600 cursor-pointer">
+								<button
+									onClick={() => handleQuantityChange("minus")}
+									className="p-3 bg-black rounded-xl text-lg border border-gray-600 cursor-pointer hover:bg-gray-900">
 									-
 								</button>
-								<span className="text-xl font-bold">1</span>
-								<button className="p-2.75 bg-black rounded-xl text-lg border border-gray-600 cursor-pointer">
+								<span className="text-xl font-bold p-3">{quantity}</span>
+								<button
+									onClick={() => handleQuantityChange("plus")}
+									className="p-2.75 bg-black rounded-xl text-lg border border-gray-600 cursor-pointer hover:bg-gray-900">
 									+
 								</button>
 								{/* Add to Cart Button */}
-								<button className="w-[12rem] py-3 bg-black rounded-xl text-lg uppercase ms-8 border border-gray-600 cursor-pointer">
+								<button
+									onClick={handleAddToCart}
+									className="w-[12rem] py-3 bg-black rounded-xl text-lg uppercase ms-8 border border-gray-600 cursor-pointer hover:bg-gray-900">
 									Add To Cart
 								</button>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div className="mt-20">
+					<h2 className="text-2xl text-center font-medium mb-4">
+						You May Also Like
+					</h2>
+					<ProductGrid products={similarProducts} />
 				</div>
 			</div>
 		</div>

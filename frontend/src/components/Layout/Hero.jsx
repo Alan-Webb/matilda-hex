@@ -8,6 +8,7 @@ const Hero = () => {
 				src={heroImg}
 				alt="Matilda Hex"
 				className="w-full h-[25rem] md:h-[37.5rem] lg:h-[43.75rem] object-cover"
+				loading="eager"
 			/>
 			<div className="absolute inset-4 flex items-center">
 				<div className="text-stone-400 p-6">

@@ -48,8 +48,7 @@ const NewArrivals = () => {
 						<img
 							// src={product.image[0]?.url}
 							src={product.image.url}
-							// alt={product.image[0]?.altText || product.name}
-							alt={product.image.altText || product.name}
+							alt={product.image[0]?.altText || product.name}
 							className="w-full h-[31.25rem] object-cover rounded-lg shadow-2xl shadow-black"
 						/>
 						<div className="absolute bottom-0 left-0 right-0 bg-opacity-50 backdrop-blur-md p-4 rounded-b-lg">
