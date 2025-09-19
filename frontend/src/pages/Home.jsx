@@ -49,6 +49,50 @@ const placeholderProducts = [
 			},
 		],
 	},
+	{
+		_id: 5,
+		name: "Blessing of Abundance",
+		price: 120,
+		images: [
+			{
+				url: "../../src/assets/blessing-of-abundance.webp",
+				altText: "Blessing of Abundance",
+			},
+		],
+	},
+	{
+		_id: 6,
+		name: "Dreamweavers Guidance",
+		price: 115,
+		images: [
+			{
+				url: "../../src/assets/dreamweavers-guidance.webp",
+				altText: "Dreamweavers Guidance",
+			},
+		],
+	},
+	{
+		_id: 7,
+		name: "Wings of Inspiration",
+		price: 130,
+		images: [
+			{
+				url: "../../src/assets/wings-of-inspiration.webp",
+				altText: "Wings of Inspiration",
+			},
+		],
+	},
+	{
+		_id: 8,
+		name: "Essence of Joy",
+		price: 125,
+		images: [
+			{
+				url: "../../src/assets/essence-of-joy.webp",
+				altText: "Essence of Joy",
+			},
+		],
+	},
 ];
 
 const Home = () => {
@@ -63,7 +107,7 @@ const Home = () => {
 			</h2>
 			<ProductDetails />
 
-			<div className="container mx-auto">
+			<div className="mx-auto px-8 bg-black text-white pt-12">
 				<h2 className="text-3xl text-center font-bold mb-4">
 					Popular Blessings
 				</h2>
