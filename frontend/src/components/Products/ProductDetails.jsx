@@ -163,19 +163,19 @@ const ProductDetails = () => {
 							<div className="flex items-center space-x-4 mt-2">
 								<button
 									onClick={() => handleQuantityChange("minus")}
-									className="p-3 bg-black rounded-xl text-lg border border-gray-600 cursor-pointer hover:bg-gray-900">
+									className="p-3 bg-black rounded-xl text-lg border border-gray-600 cursor-pointer hover:bg-gray-800">
 									-
 								</button>
 								<span className="text-xl font-bold p-3">{quantity}</span>
 								<button
 									onClick={() => handleQuantityChange("plus")}
-									className="p-2.75 bg-black rounded-xl text-lg border border-gray-600 cursor-pointer hover:bg-gray-900">
+									className="p-2.75 bg-black rounded-xl text-lg border border-gray-600 cursor-pointer hover:bg-gray-800">
 									+
 								</button>
 								{/* Add to Cart Button */}
 								<button
 									onClick={handleAddToCart}
-									className="w-[12rem] py-3 bg-black rounded-xl text-lg uppercase ms-8 border border-gray-600 cursor-pointer hover:bg-gray-900">
+									className="w-[12rem] py-3 bg-black rounded-xl text-lg uppercase ms-8 border border-gray-600 cursor-pointer hover:bg-gray-800">
 									Add To Cart
 								</button>
 							</div>

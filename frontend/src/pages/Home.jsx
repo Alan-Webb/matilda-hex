@@ -1,5 +1,6 @@
 import Hero from "../components/Layout/Hero";
 import CollectionSection from "../components/Products/CollectionSection";
+import Featured from "../components/Products/Featured";
 import NewArrivals from "../components/Products/NewArrivals";
 import ProductDetails from "../components/Products/ProductDetails";
 import ProductGrid from "../components/Products/ProductGrid";
@@ -113,6 +114,7 @@ const Home = () => {
 				</h2>
 				<ProductGrid products={placeholderProducts} />
 			</div>
+			<Featured />
 		</div>
 	);
 };
