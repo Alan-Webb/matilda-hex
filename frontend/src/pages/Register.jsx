@@ -1,14 +1,15 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import login from "../assets/hexes.webp";
+import register from "../assets/divination.webp";
 
-const Login = () => {
+const Register = () => {
+	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		console.log("User Login:", {email, password});
+		console.log("User Registered:", {name, email, password});
 	}
 
 	return (
@@ -22,8 +23,18 @@ const Login = () => {
 					</div>
 					<h2 className="text-2xl font-bold text-center mb-6">Blessed Be!</h2>
 					<p className="text-center mb-4">
-						Enter username and password to login
+						Enter username and password to Register
 					</p>
+					<div className="mb-4">
+						<label className="block text-sm font-semibold mb-2">Name</label>
+						<input
+							type="text"
+							value={name}
+							onChange={(e) => setName(e.target.value)}
+							className="w-full p-2 border rounded"
+							placeholder="Enter your name"
+						/>
+					</div>
 					<div className="mb-4">
 						<label className="block text-sm font-semibold mb-2">Email</label>
 						<input
@@ -47,16 +58,16 @@ const Login = () => {
 					<button
 						type="submit"
 						className="w-full bg-red-800 text-white uppercase p-2 rounded-xl font-semibold hover:bg-red-600 transition duration-75 cursor-pointer">
-						Login
+						Sign Up
 					</button>
 					<div>
 						<p className="inline-block mt-6 text-center text-md p-4 ps-20">
-							Don't have an account?
+							Already have an account?
 						</p>
 						<Link
-							to="/register"
+							to="/login"
 							className="inline-block text-stone-300 hover:text-red-600">
-							Register
+							Login
 						</Link>
 					</div>
 				</form>
@@ -66,8 +77,8 @@ const Login = () => {
 			<div className="hidden md:block w-1/2 bg-stone-600">
 				<div className="h-full flex flex-col justify-center items-center">
 					<img
-						src={login}
-						alt="Login to Account"
+						src={register}
+						alt="Register Account"
 						className="h-[46.875rem] w-full object-cover"
 					/>
 				</div>
@@ -76,4 +87,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default Register;
