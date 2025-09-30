@@ -39,7 +39,7 @@ const Navbar = () => {
 				{/* Navigation Links */}
 				<div className="hidden md:flex space-x-6 me-8">
 					<Link
-						to="#"
+						to="/collections/all"
 						className="text-lg font-medium uppercase hover:text-red-500">
 						Blessings
 					</Link>
