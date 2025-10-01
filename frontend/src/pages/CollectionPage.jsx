@@ -123,7 +123,10 @@ const CollectionPage = () => {
 				className={`${
 					isSidebarOpen ? "translate-x-0" : "-translate-x-full"
 				} fixed inset-y-0 z-50 left-0 w-64 bg-black overflow-y-auto transition-transform duration-300 lg:static shadow-lg shadow-gray-600`}>
-				<FilterSidebar />
+				<FilterSidebar
+					isSidebarOpen={isSidebarOpen}
+					toggleSidebar={toggleSidebar}
+				/>
 			</div>
 			<div className="flex-grow p-4">
 				<h2 className="text-2xl uppercase mb-4">All Collections</h2>
