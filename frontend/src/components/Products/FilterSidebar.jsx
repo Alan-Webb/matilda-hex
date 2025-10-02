@@ -92,6 +92,24 @@ const FilterSidebar = ({isSidebarOpen, toggleSidebar}) => {
 					</div>
 				))}
 			</div>
+
+			{/* Price Range Filter */}
+			<div className="mb-8">
+				<label className="block text-xl font-medium mb-2 uppercase">
+					Price Range
+				</label>
+				<input
+					type="range"
+					name="price-range"
+					min={0}
+					max={625}
+					className="w-full h-2 bg-stone-600 rounded-lg appearance-none cursor-pointer"
+				/>
+				<div className="flex justify-between text-stone-300 mt-2">
+					<span>€0</span>
+					<span>€{priceRange[1]}</span>
+				</div>
+			</div>
 		</div>
 	);
 };
