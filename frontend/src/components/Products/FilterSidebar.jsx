@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
-import {useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 import {IoIosClose} from "react-icons/io";
 
 const FilterSidebar = ({isSidebarOpen, toggleSidebar}) => {
 	const [searchParams, setSearchParams] = useSearchParams();
+	const navigate = useNavigate();
 	const [filters, setFilters] = useState({
 		category: "",
 		invocationType: "",
@@ -30,6 +31,45 @@ const FilterSidebar = ({isSidebarOpen, toggleSidebar}) => {
 		setPriceRange([0, params.maxPrice || 625]);
 	}, [searchParams]);
 
+	function handleFilterChange(e) {
+		const {name, value, checked, type} = e.target;
+		let newFilters = {...filters};
+
+		if (type === "checkbox") {
+			if (checked) {
+				newFilters[name] = [...(newFilters[name] || []), value];
+			} else {
+				newFilters[name] = newFilters[name].filter((item) => item !== value);
+			}
+		} else {
+			newFilters[name] = value;
+		}
+		setFilters(newFilters);
+		// console.log(newFilters);
+		updateURLParams(newFilters);
+	}
+
+	function updateURLParams(newFilters) {
+		const params = new URLSearchParams();
+		Object.keys(newFilters).forEach((key) => {
+			if (Array.isArray(newFilters[key]) && newFilters[key].length > 0) {
+				params.append(key, newFilters[key].join(","));
+			} else if (newFilters[key]) {
+				params.append(key, newFilters[key]);
+			}
+		});
+		setSearchParams(params);
+		navigate(`?${params.toString()}`);
+	}
+
+	function handlePriceChange(e) {
+		const newPrice = e.target.value;
+		setPriceRange([0], newPrice);
+		const newFilters = {...filters, minPrice: 0, maxPrice: newPrice};
+		setFilters(filters);
+		updateURLParams(newFilters);
+	}
+
 	return (
 		<div className="p-4">
 			{/* Close Button */}
@@ -50,8 +90,11 @@ const FilterSidebar = ({isSidebarOpen, toggleSidebar}) => {
 				{categories.map((category) => (
 					<div key={category} className="flex items-center mb-1 text-lg">
 						<input
-							type="checkbox"
+							type="radio"
 							name="category"
+							value={category}
+							onChange={handleFilterChange}
+							checked={filters.category === category}
 							className="mr-2 h-4 w-4 text-stone-300 accent-red-800 cursor-pointer"
 						/>
 						<span>{category}</span>
@@ -69,6 +112,9 @@ const FilterSidebar = ({isSidebarOpen, toggleSidebar}) => {
 						<input
 							type="checkbox"
 							name="category"
+							value={type}
+							onChange={handleFilterChange}
+							checked={filters.invocationType === invocationType}
 							className="mr-2 h-4 w-4 text-stone-300 accent-red-800 cursor-pointer"
 						/>
 						<span>{type}</span>
@@ -86,6 +132,9 @@ const FilterSidebar = ({isSidebarOpen, toggleSidebar}) => {
 						<input
 							type="checkbox"
 							name="category"
+							value={level}
+							onChange={handleFilterChange}
+							checked={filters.expertiseLevel === expertiseLevel}
 							className="mr-2 h-4 w-4 text-stone-300 accent-red-800 cursor-pointer"
 						/>
 						<span>{level}</span>
@@ -103,6 +152,8 @@ const FilterSidebar = ({isSidebarOpen, toggleSidebar}) => {
 					name="price-range"
 					min={0}
 					max={625}
+					value={priceRange[1]}
+					onChange={handlePriceChange}
 					className="w-full h-2 bg-stone-600 rounded-lg appearance-none cursor-pointer"
 				/>
 				<div className="flex justify-between text-stone-300 mt-2">
