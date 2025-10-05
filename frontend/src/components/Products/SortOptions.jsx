@@ -1,8 +1,16 @@
+import {useState} from "react";
+
 const SortOptions = () => {
+	const [searchParams, setSearchParams] = useState("");
+
+	function handleSortChange() {}
+
 	return (
 		<div class="flex items-center justify-end">
 			<select
 				id="sort"
+				onChange={handleSortChange}
+				value={searchParams}
 				class="bg-transparent border-b p-1 mb-4 mr-4 text-xl focus:outline-none focus:bg-black">
 				<option value="">Default</option>
 				<option value="priceAsc">Price: Low to High</option>
