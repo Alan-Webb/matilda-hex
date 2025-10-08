@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {IoIosClose} from "react-icons/io";
 
-const FilterSidebar = ({isSidebarOpen, toggleSidebar}) => {
+const FilterSidebar = ({toggleSidebar}) => {
 	const [searchParams, setSearchParams] = useSearchParams();
 	const navigate = useNavigate();
 	const [filters, setFilters] = useState({
