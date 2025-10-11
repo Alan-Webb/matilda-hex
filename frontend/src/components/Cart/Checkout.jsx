@@ -200,6 +200,45 @@ const Checkout = () => {
 						</div>
 					</form>
 				</div>
+				{/* Right Section */}
+				<div className="bg-stone-600 p-6 rounded-xl">
+					<h3 className="text-xl mb-4 uppercase">Order Summary</h3>
+					<div className="border-t py-4 mb-4">
+						{cart.products.map((product, index) => (
+							<div
+								key={index}
+								className="flex items-start justify-between py-2 border-b">
+								<div className="flex items-start">
+									<img
+										src={product.image}
+										alt={product.name}
+										className="w-20 h-24 rounded-xl object-cover mr-4"
+									/>
+									<div>
+										<h3 className="text-md">{product.name}</h3>
+										<p>Category: {product.category}</p>
+										<p>Level: {product.level}</p>
+									</div>
+								</div>
+								<p className="text-2xl mr-5">
+									€{product.price?.toLocaleString()}
+								</p>
+							</div>
+						))}
+					</div>
+					<div className="flex justify-between items-center text-2xl mb-4">
+						<p>Subtotal</p>
+						<p className="mr-5">€{cart.totalPrice?.toLocaleString()}</p>
+					</div>
+					<div className="flex justify-between items-center text-2xl">
+						<p>Shipping</p>
+						<p className="mr-5">Free</p>
+					</div>
+					<div className="flex justify-between items-center text-2xl mt-4 pt-4 border-t">
+						<p>Total</p>
+						<p className="mr-5">€{cart.totalPrice?.toLocaleString()}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
