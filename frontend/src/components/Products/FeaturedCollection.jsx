@@ -4,7 +4,7 @@ import featured from "../../assets/featured.webp";
 const Featured = () => {
 	return (
 		<section className="bg-black text-white py-16 px-4 lg:px-0">
-			<div className="container mx-auto flex flex-col-reverse lg:flex-row items-center bg-stone-600 rounded-3xl">
+			<div className="container mx-auto flex flex-col-reverse lg:flex-row items-center bg-stone-700 rounded-3xl">
 				{/* Left Content */}
 				<div className="lg:w-1/2 p-8 text-center lg:text-left">
 					<h2 className="text-lg lg:text-2xl font-semibold mb-2">

@@ -13,7 +13,7 @@ const Register = () => {
 	}
 
 	return (
-		<div className="flex bg-stone-600">
+		<div className="flex bg-stone-700">
 			<div className="w-full md:w-1/2 flex flex-col justify-center items-center p-8 md:p-12 mt-10 md:mt-2">
 				<form
 					onSubmit={handleSubmit}
@@ -74,7 +74,7 @@ const Register = () => {
 			</div>
 
 			{/* Right Side Image */}
-			<div className="hidden md:block w-1/2 bg-stone-600">
+			<div className="hidden md:block w-1/2 bg-stone-700">
 				<div className="h-full flex flex-col justify-center items-center">
 					<img
 						src={register}

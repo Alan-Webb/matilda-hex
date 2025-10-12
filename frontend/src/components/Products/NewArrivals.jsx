@@ -32,7 +32,7 @@ const NewArrivals = () => {
 	];
 
 	return (
-		<section className="bg-stone-600 text-white py-12">
+		<section className="bg-stone-700 text-white py-12">
 			<div className="mx-auto text-center p-8">
 				<h2 className="text-3xl font-bold mb-4">Latest Courses</h2>
 				<p className="text-lg mb-8">

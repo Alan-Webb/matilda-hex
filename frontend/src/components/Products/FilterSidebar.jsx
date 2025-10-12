@@ -154,7 +154,7 @@ const FilterSidebar = ({toggleSidebar}) => {
 					max={625}
 					value={priceRange[1]}
 					onChange={handlePriceChange}
-					className="w-full h-2 bg-stone-600 rounded-lg appearance-none cursor-pointer"
+					className="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer"
 				/>
 				<div className="flex justify-between text-stone-300 mt-2">
 					<span>€0</span>

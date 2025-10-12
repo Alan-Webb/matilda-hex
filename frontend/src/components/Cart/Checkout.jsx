@@ -201,7 +201,7 @@ const Checkout = () => {
 					</form>
 				</div>
 				{/* Right Section */}
-				<div className="bg-stone-600 p-6 rounded-xl">
+				<div className="bg-stone-700 p-6 rounded-xl">
 					<h3 className="text-xl mb-4 uppercase">Order Summary</h3>
 					<div className="border-t py-4 mb-4">
 						{cart.products.map((product, index) => (

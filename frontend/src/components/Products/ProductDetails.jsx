@@ -92,7 +92,7 @@ const ProductDetails = () => {
 
 	return (
 		<div className="bg-black text-white p-6 mt-12">
-			<div className="bg-stone-600 max-w-6xl mx-auto p-8 rounded-lg">
+			<div className="bg-stone-700 max-w-6xl mx-auto p-8 rounded-lg">
 				<div className="flex flex-col md:flex-row">
 					{/* Left Thumbnails */}
 					<div className="hidden md:flex flex-col space-y-4 mr-6">

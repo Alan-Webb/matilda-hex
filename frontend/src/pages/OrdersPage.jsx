@@ -43,7 +43,7 @@ const OrdersPage = () => {
 			<h2 className="text-xl sm:text-2xl font-bold mb-6">My Orders</h2>
 			<div className="relative rounded-xl overflow-hidden">
 				<table className="min-w-full text-center text-white">
-					<thead className="bg-stone-600 text-xs uppercase">
+					<thead className="bg-stone-700 text-xs uppercase">
 						<tr>
 							<th className="py-2 px-4 md:py-3 md:pe-8 lg:pe-12">Image</th>
 							<th className="py-2 pe-3 md:py-3 md:pe-5 lg:pe-6">Order ID</th>
