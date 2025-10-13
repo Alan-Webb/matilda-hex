@@ -101,6 +101,7 @@ const Home = () => {
 	return (
 		<div>
 			<Hero />
+			<Features />
 			<CollectionSection />
 			<NewArrivals />
 			{/* Best Seller */}
@@ -108,7 +109,6 @@ const Home = () => {
 				Best Sellers
 			</h2>
 			<ProductDetails />
-
 			<div className="mx-auto px-8 bg-black text-white pt-12">
 				<h2 className="text-3xl text-center font-bold mb-4">
 					Popular Blessings
@@ -116,7 +116,6 @@ const Home = () => {
 				<ProductGrid products={placeholderProducts} />
 			</div>
 			<FeaturedCollection />
-			<Features />
 		</div>
 	);
 };

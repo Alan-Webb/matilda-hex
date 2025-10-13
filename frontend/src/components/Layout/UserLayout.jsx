@@ -5,13 +5,10 @@ import {Outlet} from "react-router-dom";
 const UserLayout = () => {
 	return (
 		<>
-			{/* Header */}
 			<Header />
-			{/* Main Content */}
 			<main>
 				<Outlet />
 			</main>
-			{/* Footer */}
 			<Footer />
 		</>
 	);

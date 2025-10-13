@@ -3,10 +3,10 @@ import {HiArrowPathRoundedSquare, HiOutlineCreditCard} from "react-icons/hi2";
 
 const Features = () => {
 	return (
-		<section className="py-16 px-4 bg-red-800 text-white border-t">
+		<section className="py-8 px-4 bg-red-800 text-stone-300 border-t border-b border-stone-300">
 			<div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 				{/* Feature 1 */}
-				<div className="flex flex-col items-center">
+				<div className="flex flex-col items-center pb-6 border-b md:border-none">
 					<div className="p-4 rounded-full mb-4">
 						<FaBagShopping className="text-4xl" />
 					</div>
@@ -19,7 +19,7 @@ const Features = () => {
 				</div>
 
 				{/* Feature 2 */}
-				<div className="flex flex-col items-center">
+				<div className="flex flex-col items-center pb-6 border-b md:border-none">
 					<div className="p-4 rounded-full mb-4">
 						<HiArrowPathRoundedSquare className="text-4xl" />
 					</div>

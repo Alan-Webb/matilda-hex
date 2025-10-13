@@ -7,7 +7,7 @@ const Hero = () => {
 			<img
 				src={heroImg}
 				alt="Matilda Hex"
-				className="w-full h-[25rem] md:h-[37.5rem] lg:h-[43.75rem] object-cover"
+				className="w-full h-[25rem] md:h-[37.5rem] object-cover"
 				loading="eager"
 			/>
 			<div className="absolute inset-4 flex items-center">
@@ -16,7 +16,7 @@ const Hero = () => {
 						Wiccan Solutions
 						<br /> for Modern Living
 					</h1>
-					<p className="text-md md:text-lg lg:text-xl tracking-tight  mb-6">
+					<p className="text-md md:text-lg lg:text-xl tracking-tight mb-6">
 						Explore our spell kits and courses
 						<br />
 						with fast world wide shipping
