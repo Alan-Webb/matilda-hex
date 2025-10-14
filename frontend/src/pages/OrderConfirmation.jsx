@@ -53,7 +53,7 @@ const OrderConfirmation = () => {
 
 				{checkout && (
 					<div className="bg-stone-700 p-6 rounded-xl border border-stone-300">
-						<div className="flex justify-between mb-20">
+						<div className="flex justify-between mb-12">
 							{/* Order Id and Date */}
 							<div>
 								<h2 className="text-xl font-semibold">
@@ -74,7 +74,7 @@ const OrderConfirmation = () => {
 							</div>
 						</div>
 						{/* Ordered Items */}
-						<div className="mb-20">
+						<div className="mb-12">
 							{checkout.checkoutItems.map((item) => (
 								<div key={item.productId} className="flex items-center mb-4">
 									<img
@@ -96,6 +96,25 @@ const OrderConfirmation = () => {
 									</div>
 								</div>
 							))}
+						</div>
+						{/* Payment and Delivery Info */}
+						<div className="grid grid-cols-2 gap-8">
+							{/* Payment Info */}
+							<div>
+								<h4 className="text-lg font-semibold mb-2">Payment</h4>
+								<p className="text-stone-300">PayPal</p>
+							</div>
+							{/* Delivery Info */}
+							<div>
+								<h4 className="text-lg font-semibold mb-2">Delivery</h4>
+								<p className="text-stone-300">
+									{checkout.shippingAddress.address}
+								</p>
+								<p className="text-stone-300">
+									{checkout.shippingAddress.city},{" "}
+									{checkout.shippingAddress.country}
+								</p>
+							</div>
 						</div>
 					</div>
 				)}
