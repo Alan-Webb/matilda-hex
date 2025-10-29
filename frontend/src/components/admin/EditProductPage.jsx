@@ -93,12 +93,16 @@ const EditProductPage = () => {
 				</div>
 				{/* Invocation Type */}
 				<div className="mb-4">
-					<label className="block font-semibold mb-2 uppercase">Invocation Type</label>
+					<label className="block font-semibold mb-2 uppercase">
+						Invocation Type
+					</label>
 					<input
 						type="text"
 						name="invocationType"
 						value={productData.invocationType}
-						onChange={(e)=>setProductData({...productData, category: e.target.value})}
+						onChange={(e) =>
+							setProductData({...productData, category: e.target.value})
+						}
 						className="w-full border border-stone-300 rounded-md p-2"
 					/>
 				</div>
@@ -109,7 +113,9 @@ const EditProductPage = () => {
 						type="text"
 						name="category"
 						value={productData.category}
-						onChange={(e)=>setProductData({...productData, category: e.target.value})}
+						onChange={(e) =>
+							setProductData({...productData, category: e.target.value})
+						}
 						className="w-full border border-stone-300 rounded-md p-2"
 					/>
 				</div>
