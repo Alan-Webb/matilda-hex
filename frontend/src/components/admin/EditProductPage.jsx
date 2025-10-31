@@ -9,10 +9,10 @@ const EditProductPage = () => {
 		sku: "",
 		images: [
 			{
-				url: "https:picsum.photos/150?random=1",
+				url: "https://picsum.photos/150?random=1",
 			},
 			{
-				url: "https:picsum.photos/150?random=2",
+				url: "https://picsum.photos/150?random=2",
 			},
 		],
 	});
@@ -29,11 +29,11 @@ const EditProductPage = () => {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		console.log(file);
+		console.log(productData);
 	}
 
 	return (
-		<div className="max-w-8xl mx-auto p-6 absolute top-12 sm:left-28 md:left-72 xl:left-128 w-[27rem] md:w-[32rem] lg:w-[38rem] xl:w-[44rem] ">
+		<div className="max-w-8xl mx-auto p-6 absolute top-12 sm:left-28 md:left-72 xl:left-128 w-[27rem] md:w-[32rem] lg:w-[38rem] xl:w-[44rem]">
 			<h2 className="text-3xl font-bold mb-1">Edit Product</h2>
 			<form onSubmit={handleSubmit}>
 				{/* Name */}
@@ -115,7 +115,7 @@ const EditProductPage = () => {
 								<img
 									src={image.url}
 									alt={image.altText || "Product Image"}
-									className="w-20 h-20 object-cover rounded-md shadow"
+									className="w-20 h-20 object-cover rounded-md shadow-sm shadow-white"
 								/>
 							</div>
 						))}
@@ -124,7 +124,7 @@ const EditProductPage = () => {
 					<button
 						type="submit"
 						className="w-full bg-red-800 rounded-lg text-xl uppercase p-2 mx-auto mt-4 cursor-pointer hover:bg-red-700">
-						Update
+						Update Product
 					</button>
 				</div>
 			</form>
