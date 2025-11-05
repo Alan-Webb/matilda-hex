@@ -12,11 +12,7 @@ router.post("/register", async (req, res) => {
 
 	try {
 		// Registration logic
-		res.send({
-			name,
-			email,
-			password,
-		});
+		let user = await User.findOne({email});
 	} catch (error) {
 		console.log(error);
 		res.status(500).send("Server Error");
