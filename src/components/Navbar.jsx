@@ -1,8 +1,9 @@
+import {useState} from "react";
 
 const Navbar = () => {
-  return (
-    <div>Navbar</div>
-  )
-}
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-export default Navbar
+	return <div>Navbar</div>;
+};
+
+export default Navbar;
