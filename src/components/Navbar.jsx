@@ -7,7 +7,11 @@ const Navbar = () => {
 
 	const navLinks = ["Home", "Shop", "Collection", "Sale", "Deals"];
 
-	return <div>Navbar</div>;
+	return (
+		<nav className="relative z-50" data-aos="fade-down">
+			<div></div>
+		</nav>
+	);
 };
 
 export default Navbar;
