@@ -9,7 +9,9 @@ const Navbar = () => {
 
 	return (
 		<nav className="relative z-50" data-aos="fade-down">
-			<div></div>
+			<div className="container mx-auto px-4 md:px-8 lg:px-16 py-6">
+				<div></div>
+			</div>
 		</nav>
 	);
 };
