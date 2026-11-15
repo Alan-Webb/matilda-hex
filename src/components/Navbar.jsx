@@ -21,6 +21,7 @@ const Navbar = () => {
 							<img src={logo} alt="Matilda Hex Logo" width={36} />
 						</span>
 					</div>
+					<div></div>
 				</div>
 			</div>
 		</nav>
