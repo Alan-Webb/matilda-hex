@@ -21,7 +21,8 @@ const Navbar = () => {
 							<img src={logo} alt="Matilda Hex Logo" width={36} />
 						</span>
 					</div>
-					<div></div>
+					{/* Navigation Links */}
+					<div className="hidden md:flex items-center justify-center flex-1"></div>
 				</div>
 			</div>
 		</nav>
