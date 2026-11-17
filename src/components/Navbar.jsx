@@ -22,7 +22,9 @@ const Navbar = () => {
 						</span>
 					</div>
 					{/* Navigation Links */}
-					<div className="hidden md:flex items-center justify-center flex-1"></div>
+					<div className="hidden md:flex items-center justify-center flex-1">
+						<div className="flex gap-8 lg:gap-12 text-white"></div>
+					</div>
 				</div>
 			</div>
 		</nav>
