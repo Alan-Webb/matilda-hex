@@ -23,7 +23,13 @@ const Navbar = () => {
 					</div>
 					{/* Navigation Links */}
 					<div className="hidden md:flex items-center justify-center flex-1">
-						<div className="flex gap-8 lg:gap-12 text-white"></div>
+						<div className="flex gap-8 lg:gap-12 text-white">
+							{navLinks.map((link) => (
+								<a href="#" key={link}>
+									{link}
+								</a>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
