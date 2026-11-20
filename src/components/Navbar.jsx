@@ -25,7 +25,11 @@ const Navbar = () => {
 					<div className="hidden md:flex items-center justify-center flex-1">
 						<div className="flex gap-8 lg:gap-12 text-white">
 							{navLinks.map((link) => (
-								<a href="#" key={link} onClick={() => setActiveLink(link)}>
+								<a
+									href="#"
+									key={link}
+									onClick={() => setActiveLink(link)}
+									onMouseEnter={() => setHoveredLink(link)}>
 									{link}
 								</a>
 							))}
