@@ -21,7 +21,7 @@ const Navbar = () => {
 							<img src={logo} alt="Matilda Hex Logo" width={36} />
 						</span>
 					</div>
-					{/* Navigation Links */}
+					{/* DESKTOP NAVIGATION */}
 					<div className="hidden md:flex items-center justify-center flex-1">
 						<div className="flex gap-8 lg:gap-12 text-white">
 							{navLinks.map((link) => (
@@ -29,7 +29,11 @@ const Navbar = () => {
 									href="#"
 									key={link}
 									onClick={() => setActiveLink(link)}
-									onMouseEnter={() => setHoveredLink(link)}>
+									onMouseEnter={() => setHoveredLink(link)}
+									onMouseLeave={() => setHoveredLink(null)}
+									className={`relative font-medium transition-opacity hover:opacity-70
+										${activeLink === link ? "opacity-100" : "opacity-80"}
+										`}>
 									{link}
 								</a>
 							))}
