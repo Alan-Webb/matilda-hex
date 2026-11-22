@@ -31,7 +31,7 @@ const Navbar = () => {
 									onClick={() => setActiveLink(link)}
 									onMouseEnter={() => setHoveredLink(link)}
 									onMouseLeave={() => setHoveredLink(null)}
-									className={`relative font-medium transition-opacity hover:opacity-70
+									className={`relative text-xl font-medium transition-opacity hover:opacity-70
 										${activeLink === link ? "opacity-100" : "opacity-80"}
 										`}>
 									{link}
