@@ -35,6 +35,9 @@ const Navbar = () => {
 										${activeLink === link ? "opacity-100" : "opacity-80"}
 										`}>
 									{link}
+									{(hoveredLink === link || activeLink) && (
+										<span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-white rounded-full animate"></span>
+									)}
 								</a>
 							))}
 						</div>
